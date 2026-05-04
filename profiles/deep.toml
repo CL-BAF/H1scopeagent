@@ -1,0 +1,36 @@
+# Deep profile — comprehensive recon, slow and thorough
+name = "deep"
+concurrency = 2
+delay = 5.0
+request_timeout = 60
+browser_headless = true
+browser_slowmo = 0
+full_page_screenshots = true
+finding_limit = 25
+asset_limit = 100
+crawl_depth = 5
+js_collection = true
+attack_enabled = true
+submit_enabled = false
+risk_level = "aggressive"
+attack_score_threshold = 0.4
+attack_max_concurrency = 3
+subdomain_enum = true
+dns_resolution = true
+http_probing = true
+tls_inspection = true
+port_scanning = true
+url_crawling = true
+wayback_import = true
+github_search = true
+leak_scanning = true
+cloud_bucket_check = true
+
+recon_modules = [
+    "subdomains", "dns", "http", "tls", "ports", "crawler",
+    "parameters", "javascript", "history", "github", "leaks",
+    "cloud", "api_routes", "admin_panels"
+]
+attack_tools = ["nuclei", "gobuster", "ffuf", "nmap"]
+attack_tool_timeouts = { nuclei = 600, gobuster = 300, ffuf = 300, nmap = 180 }
+excluded_detectors = []

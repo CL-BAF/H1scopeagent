@@ -1,0 +1,32 @@
+# Fast profile — aggressive speed, shallow depth
+name = "fast"
+concurrency = 10
+delay = 0.5
+request_timeout = 15
+browser_headless = true
+browser_slowmo = 0
+full_page_screenshots = false
+finding_limit = 5
+asset_limit = 30
+crawl_depth = 1
+js_collection = false
+attack_enabled = false
+submit_enabled = false
+risk_level = "verified"
+attack_score_threshold = 0.8
+attack_max_concurrency = 1
+subdomain_enum = true
+dns_resolution = true
+http_probing = true
+tls_inspection = true
+port_scanning = false
+url_crawling = true
+wayback_import = false
+github_search = false
+leak_scanning = false
+cloud_bucket_check = false
+
+recon_modules = ["subdomains", "dns", "http", "tls", "crawler"]
+attack_tools = ["nuclei"]
+attack_tool_timeouts = { nuclei = 120, gobuster = 120, ffuf = 120, nmap = 60 }
+excluded_detectors = ["check_robots_sensitive", "check_exposed_source_maps"]

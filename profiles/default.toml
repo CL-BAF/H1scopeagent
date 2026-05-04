@@ -1,0 +1,32 @@
+# Default profile — balanced reconnaissance
+name = "default"
+concurrency = 3
+delay = 3.0
+request_timeout = 30
+browser_headless = true
+browser_slowmo = 0
+full_page_screenshots = false
+finding_limit = 10
+asset_limit = 50
+crawl_depth = 3
+js_collection = true
+attack_enabled = false
+submit_enabled = false
+risk_level = "verified"
+attack_score_threshold = 0.6
+attack_max_concurrency = 2
+subdomain_enum = true
+dns_resolution = true
+http_probing = true
+tls_inspection = true
+port_scanning = false
+url_crawling = true
+wayback_import = true
+github_search = false
+leak_scanning = false
+cloud_bucket_check = false
+
+recon_modules = ["subdomains", "dns", "http", "tls", "crawler", "javascript", "history"]
+attack_tools = ["nuclei", "gobuster", "ffuf", "nmap"]
+attack_tool_timeouts = { nuclei = 300, gobuster = 180, ffuf = 180, nmap = 120 }
+excluded_detectors = []

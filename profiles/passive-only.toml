@@ -1,0 +1,36 @@
+# Passive-only profile — no active interaction, observation only
+name = "passive-only"
+concurrency = 5
+delay = 2.0
+request_timeout = 30
+browser_headless = true
+browser_slowmo = 0
+full_page_screenshots = false
+finding_limit = 10
+asset_limit = 50
+crawl_depth = 0
+js_collection = false
+attack_enabled = false
+submit_enabled = false
+risk_level = "safe"
+attack_score_threshold = 1.0
+attack_max_concurrency = 0
+subdomain_enum = true
+dns_resolution = true
+http_probing = false
+tls_inspection = true
+port_scanning = false
+url_crawling = false
+wayback_import = true
+github_search = false
+leak_scanning = false
+cloud_bucket_check = false
+
+recon_modules = ["subdomains", "dns", "history"]
+attack_tools = []
+attack_tool_timeouts = {}
+excluded_detectors = [
+    "check_redirect_params", "check_graphql_introspection",
+    "check_cors_misconfig", "check_secret_leakage",
+    "check_exposed_files", "check_exposed_source_maps"
+]
