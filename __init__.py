@@ -1,0 +1,3 @@
+"""H1ScopeAgent — Authorized HackerOne bug bounty assistant."""
+
+__version__ = "0.1.0"
