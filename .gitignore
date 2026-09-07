@@ -14,7 +14,25 @@ build/
 .venv/
 venv/
 env/
+
+# Secrets and local configuration
 .env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.token
+credentials.json
+
+# Local AI/agent runtime state
+.claude/
+.codex/
+.opencode/
+.opencode-comms/
+.opencode-orchestrator/
 
 # IDE
 .idea/
@@ -29,12 +47,9 @@ htmlcov/
 
 # Project data
 data/
+logs/
+*.log
 
 # OS files
 .DS_Store
 Thumbs.db
-
-# Secrets
-*.pem
-*.key
-credentials.json
